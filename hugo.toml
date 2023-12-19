@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://bandit1983.github.io/apertus_website_hugo_prototype/'
 languageCode = 'en-us'
 title = 'apertus° (WIP)'
 theme = "apertus"
