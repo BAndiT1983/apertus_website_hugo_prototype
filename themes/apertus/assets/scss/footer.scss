@@ -1,0 +1,67 @@
+@import "colors.scss";
+
+.footer {
+  background: $dark-background;
+}
+
+.footer-brand {
+  border-bottom: 0.25rem solid $apertus-orange;
+}
+
+.footer-brand-img {
+  width: 9rem;
+  // margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-main-area {
+  background: $light-background;
+  padding-top: 4rem;
+}
+
+.footer a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.footer a:hover {
+  color: #fa8756;
+}
+
+.footer-column-caption {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.social-icon {
+  height: 2rem;
+}
+
+// .social-icon:hover {
+//   filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+// }
+
+.footer-button {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  border-top-color: rgb(187, 187, 187);
+  border-right-color: rgb(187, 187, 187);
+  border-bottom-color: rgb(187, 187, 187);
+  border-left-color: rgb(187, 187, 187);
+}
+
+.footer-button:hover {
+  color: #fa8756;
+}
+
+.sponsors-link {
+  color: $apertus-orange !important;
+}

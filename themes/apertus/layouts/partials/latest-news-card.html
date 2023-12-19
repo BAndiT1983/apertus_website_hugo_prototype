@@ -1,0 +1,21 @@
+{{ $teaser_image_url := urls.JoinPath .Permalink .Params.teaser_image }}
+{{ $date_ago := now.Sub $.Date }}
+<div class="news-card">
+  <div class="d-flex flex-row g-5">
+    <img class="card-teaser-image" src="{{ $teaser_image_url }}" />
+    <div class="d-flex flex-column">
+      <a href="{{ .Permalink }}" class="card-caption">{{ .Title }}</a>
+      <div class="card-date">
+        {{ .Date.Format "2 Jan 2006 15:04" }}
+        {{ with .Params.author }}
+          by <span class="card-author">{{ . }}</span>
+        {{ end }}
+      </div>
+      <div>
+        {{ .Summary }}<span
+          ><a href="{{ .Permalink }}" class="card-more">» Read more</a></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

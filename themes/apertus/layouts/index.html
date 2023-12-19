@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <main aria-role="main">
+    <!-- <header class="homepage-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <span class="subtitle">{{ . }}</span>
+    {{ end }} 
+    </header> -->
+    <div class="homepage-content">
+      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+      {{ .Content }}
+    </div>
+    INDEX_!!!
+    <div>
+      {{ $section := "articles" }}
+      {{ range first 10 .Site.RegularPages }}
+        {{ .Render "summary" }}
+      {{ end }}
+      {{ range first 5 (where .Site.RegularPages "Section" $section)}}
+        {{ partial "latest-news-card.html" . }}
+        <!-- <div>
+          {{ .Title }}
+          {{ .Summary }}
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </div> -->
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

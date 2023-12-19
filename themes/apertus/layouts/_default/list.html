@@ -1,0 +1,22 @@
+{{ define "main" }}
+  LIST
+  <main>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div>
+      {{ partial "latest-news-card.html" . }}
+      {{ .Content }}
+      {{ range .Pages }}
+        <div>
+          {{ .Title }}
+          {{ .Summary }}
+          {{ .Date }}
+          {{ .PublishDate }}
+          {{ .Params.author }}
+          <a href="{{ .Permalink }}">{{.Title}}</a>
+        </div>
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
